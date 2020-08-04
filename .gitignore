@@ -1,0 +1,70 @@
+# Java
+*.class
+.classpath
+.project
+
+.idea
+.metadata
+.settings
+
+target
+**/build/classes
+**/WEB-INF/lib
+packages
+publish
+UrlToPdfWebAPI/bin
+UrlToPdfWebAPI/PDF
+UrlToPdfWebAPI/publish
+test
+
+
+# Python
+__pycache__
+
+
+
+# C and C++
+*.o
+*.a
+*.so
+*.bin
+*.dmp
+
+
+# LLVM
+*.bc
+
+
+# QT
+*Desktop-Debug
+*Desktop-Release
+Makefile.Debug
+Makefile.Release
+
+
+# Visula Studio
+*.filters
+*.user
+*.suo
+*.sdf
+*.ncb
+*.obj
+*.exe
+ipch
+
+.vs
+.vscode
+Debug
+Release
+
+
+
+# Test
+*.lnk
+*.log
+*.me.bat
+*.me.sh
+ZZZTempZZZ
+
+
+

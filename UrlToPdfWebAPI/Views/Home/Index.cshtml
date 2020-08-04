@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>UrlToPdfWebAPI</title>
+    <script language="javascript">
+    function generatePDF() {
+        var urlContent = encodeURIComponent(document.getElementById("pdf_content").value);
+        var urlFooter = encodeURIComponent(document.getElementById("pdf_footer").value);
+        var urlHeader = encodeURIComponent(document.getElementById("pdf_header").value);
+        var urlPDF = location.href + "/api/Url2PDF/?" + "HeaderPath=" + urlHeader + "&FooterPath=" + urlFooter + "&WebURL=" + urlContent;
+        alert(urlPDF);
+        location.href = urlPDF;
+    }
+    </script>
+
+</head>
+<body>
+    <div>
+        <div>
+            <h3>UrlToPdfWebAPI功能说明</h3>
+            <ol>
+                <li class="one">
+                    /api/Url2PDF/?HeaderPath=xxx&FooterPath=xxx&WebURL=xxx
+                </li>
+                <li class="one">
+                    常见错误01：无法转换生成PDF
+                    排查第01步：首先检查IIS下面的UrlToPDF.exe是否可以运行，如果不可以运行，要安装对应版本的vcredist可再发行组件包
+                </li>
+            </ol>
+        </div>
+        <div>
+            <h3>UrlToPdfWebAPI测试页面（页眉页脚必须为简单页面或空）</h3>
+            内容: <input type="text" id="pdf_content" value="http://bing.com"><br>
+            页眉: <input type="text" id="pdf_header" value="http://bing.com"><br>
+            页脚: <input type="text" id="pdf_footer" value="http://bing.com"><br>
+            <input type="button" id="pdf_commit" value="生成PDF" onclick="generatePDF();"><br>
+        </div>
+    </div>
+</body>
